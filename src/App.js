@@ -1,17 +1,17 @@
 import React from "react";
-import logo from "./logo.svg";
-import "./App.css";
-import AppHeader from "./pages/AppHeader";
-import AppBody from "./pages/AppBody";
-import AppFooter from "./pages/AppFooter";
-
-
 function App() {
+  let count = 1;
+  let MyCounterFun=()=>{
+    alert("how r you");
+  }
+
   return (
     <>
-      <AppHeader />
-      <AppBody />
-      <AppFooter />
+      <div className="ms-5">
+        <h1>Counter app</h1>
+        <h1>1</h1>
+        <input type="button" value="like me" onClick={MyCounterFun}/>
+      </div>
     </>
   );
 }
