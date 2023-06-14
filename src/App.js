@@ -2,37 +2,26 @@ import React, { useState } from "react";
 function App() {
   return (
     <>
-    
-      <h1>Counter app</h1>
-      <CounterApp />
-      <CounterApp />
-      <CounterApp />
-      <CounterApp />
-      <CounterApp />
+      <h1>CounterApp</h1>
+      <StringStyle />
     </>
   );
 }
-function CounterApp() {
-  //stateful variable declaration
-  let [count, setCount] = useState(1);
-
-  let MyCounterApp = () => {
-    count = count + 1;
-    //setcount() is used to update the valaue on userinterface(UI)
-    setCount(count);
+function StringStyle() {
+  let [str, SetStr] = useState("Hello World");
+  let ToLowerFun = () => {
+    str = str.toLowerCase();
+    SetStr(str);
+  };
+  let ToUpperFun = () => {
+    str = str.toUpperCase();
+    SetStr(str);
   };
   return (
     <>
-      <h5>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil ipsa
-        mollitia rerum, corrupti eos aspernatur expedita laboriosam laudantium
-        quas voluptates commodi, iusto dignissimos! Reprehenderit dolorem, quis
-        animi a in harum.
-      </h5>
-      <h5>
-        {count}
-        <input type="button" value="&#128077;" onClick={MyCounterApp} />
-      </h5>
+      <h3>{str}</h3>
+      <input type="button" value="lower case" onClick={ToLowerFun} />
+      <input type="button" value="upper case" onClick={ToUpperFun} />
     </>
   );
 }
