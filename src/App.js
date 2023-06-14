@@ -2,6 +2,7 @@ import React, { useState } from "react";
 function App() {
   return (
     <>
+    
       <h1>Counter app</h1>
       <CounterApp />
       <CounterApp />
@@ -30,7 +31,7 @@ function CounterApp() {
       </h5>
       <h5>
         {count}
-        <input type="button" value="like me" onClick={MyCounterApp} />
+        <input type="button" value="&#128077;" onClick={MyCounterApp} />
       </h5>
     </>
   );
