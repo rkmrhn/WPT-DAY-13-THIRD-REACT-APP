@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 function App() {
   return (
     <>
@@ -8,11 +8,14 @@ function App() {
   );
 }
 function CounterApp() {
-  let count = 1;
+
+  //stateful variable declaration
+  let [count,setCount] = useState(1);
 
   let MyCounterApp = () => {
-    count = count + 1;
-    console.log(count);
+    count=count+1;
+    //setcount() is used to update the valaue on userinterface(UI)
+    setCount(count);
   };
   return (
     <>
